@@ -16,7 +16,7 @@ async def parse_with(url):
 async def parse_without(url):
     api = requests.get(url)
     api_content = api.text
-    soup = BeautifulSoup(api_content, 'lxml')
+    soup = BeautifulSoup(api_content, 'html.parser')
     text = soup.find_all('div', {'class': 'Lyrics__Container-sc-1ynbvzw-6'})
     f = open("file.txt", "w")
     print(len(text))
