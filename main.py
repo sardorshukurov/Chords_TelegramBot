@@ -43,7 +43,7 @@ async def main_menu_state(message: types.Message):
         await bot.send_message(
             chat_id=chat_id,
             text="Напишите название песни или строчки из нее.",
-            reply_markup=mkp.back_menu
+            reply_markup=mkp.back_menu,
         )
         await Form.chords.set()
     elif text == 'Без аккордов':
